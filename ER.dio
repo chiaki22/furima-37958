@@ -1,0 +1,42 @@
+<mxfile host="65bd71144e">
+    <diagram id="40uz0gqm1VkfvGFGcbXB" name="ページ1">
+        <mxGraphModel dx="728" dy="572" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="31" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontColor=#000000;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;endSize=20;startSize=20;" parent="1" source="25" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="420" y="140" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" style="edgeStyle=none;html=1;entryX=0.336;entryY=-0.018;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#000000;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;startSize=20;endSize=20;" parent="1" source="25" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="userテーブル&lt;br&gt;&lt;br&gt;・nickname&lt;br&gt;・email&lt;br&gt;・encrypted_password&lt;br&gt;・last_name&lt;br&gt;・first_name&lt;br&gt;・last_name_kana&lt;br&gt;・first_name_kana&lt;br&gt;・birth_date" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontColor=#333333;fillColor=#f5f5f5;strokeColor=#666666;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="55" width="220" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" style="edgeStyle=none;html=1;fontColor=#000000;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;startSize=20;endSize=20;entryX=0.792;entryY=-0.024;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="26" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="250" y="380" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="550" y="320"/>
+                            <mxPoint x="250" y="320"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="sellテーブル&lt;br&gt;&lt;br&gt;・item_name&lt;br&gt;・item_info&lt;br&gt;・item_category_id&lt;br&gt;・item_status_id&lt;br&gt;・&lt;span&gt;shipping_fee_id&lt;br&gt;・&lt;/span&gt;&lt;span&gt;prefecture_id&lt;br&gt;&lt;/span&gt;&lt;span&gt;・scheduled_delivery_id&lt;br&gt;・price&lt;br&gt;・user_id&lt;br&gt;&lt;/span&gt;" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontColor=#333333;fillColor=#f5f5f5;strokeColor=#666666;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="50" width="260" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=none;html=1;fontColor=#000000;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;startSize=20;endSize=20;" parent="1" source="29" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="buyテーブル&lt;br&gt;&lt;br&gt;・user_id&lt;br&gt;&lt;span&gt;・sell_id&lt;br&gt;&lt;/span&gt;" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontColor=#333333;fillColor=#f5f5f5;strokeColor=#666666;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="390" width="250" height="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="addressテーブル&lt;br&gt;&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;menlo&amp;#34; , &amp;#34;monaco&amp;#34; , &amp;#34;courier new&amp;#34; , monospace ; line-height: 18px&quot;&gt;&lt;/div&gt;&lt;font color=&quot;#ce9178&quot; face=&quot;menlo, monaco, courier new, monospace&quot;&gt;&lt;span style=&quot;background-color: rgb(30 , 30 , 30)&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;・postal_code&lt;br&gt;・prefecture_id&lt;br&gt;・city&lt;br&gt;・address&lt;br&gt;・building&lt;br&gt;&lt;span&gt;・phone&lt;br&gt;&lt;/span&gt;&lt;span&gt;・buy_id&lt;br&gt;&lt;/span&gt;" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fontColor=#333333;fillColor=#f5f5f5;strokeColor=#666666;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="390" width="250" height="160" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
