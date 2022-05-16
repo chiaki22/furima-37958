@@ -7,7 +7,7 @@ class User < ApplicationRecord
   #        has_many :sells
   #        has_many :buys
 
-  validates :nickname,        presence: true
+  validates :nickname,        presence: true, length: {maximum: 40}
   validates :birth_date,      presence: true
   
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
