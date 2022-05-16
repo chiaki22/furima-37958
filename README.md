@@ -18,7 +18,7 @@
 - has_many :sells
 - has_many :buys
 
-## sells テーブル
+## items テーブル
 
 | Column                | Type       | Options                        |
 | --------------------- | ---------- | ------------------------------ |
@@ -37,12 +37,12 @@
 - belongs_to :user
 - has_one :buy
 
-## buys テーブル
+## orders テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
 | user   | references | null: false, foreign_key: true |
-| sell   | references | null: false, foreign_key: true |
+| item   | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -60,7 +60,7 @@
 | address        | string     | null: false                    |
 | building       | string     |                                |
 | phone          | string     | null: false                    |
-| buy            | references | null: false, foreign_key: true |
+| order          | references | null: false, foreign_key: true |
 
 ### Association
 
