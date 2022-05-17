@@ -15,8 +15,8 @@
 
 ### Association
 
-- has_many :sells
-- has_many :buys
+- has_many :items
+- has_many :orders
 
 ## items テーブル
 
@@ -35,7 +35,7 @@
 ### Association
 
 - belongs_to :user
-- has_one :buy
+- has_one :order
 
 ## orders テーブル
 
@@ -47,7 +47,7 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :sell
+- belongs_to :item
 - has_one :address
 
 ## addresses テーブル
@@ -64,4 +64,4 @@
 
 ### Association
 
-- belongs_to :buy
+- belongs_to :order
