@@ -7,7 +7,7 @@ function count(){
     addTaxDom.innerHTML = Math.round(inputValue * 0.1);
 
     const addPofitDom = document.getElementById("profit");
-    addPofitDom.innerHTML = Math.round(inputValue - Math.round(inputValue * 0.1));
+    addPofitDom.innerHTML = Math.floor(inputValue - Math.floor(inputValue * 0.1));
   })
 };
 

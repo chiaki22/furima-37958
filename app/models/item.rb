@@ -4,23 +4,17 @@ class Item < ApplicationRecord
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :item_category
-  belongs_to :item_status
-  belongs_to :shipping_fee
-  belongs_to :prefecture
-  belongs_to :scheduled_delivery
+  belongs_to :item_category, :item_status, :shipping_fee, :prefecture, :scheduled_delivery
 
-  validates :image,                  presence: true
-  validates :item_name,              presence: true, length: {maximum: 40}
-  validates :item_info,              presence: true, length: {maximum: 1000}
-  validates :item_category_id,       numericality: { other_than: 1 , message: "カテゴリーを選択してください"} 
-  validates :item_status_id,         numericality: { other_than: 1 , message: "商品の状態を選択してください"} 
-  validates :shipping_fee_id,        numericality: { other_than: 1 , message: "配送料の負担を選択してください"} 
-  validates :prefecture_id,          numericality: { other_than: 1 , message: "発送元の地域を選択してください"} 
-  validates :scheduled_delivery_id,  numericality: { other_than: 1 , message: "発送までの日数を選択してください"} 
-
-  with_options presence: true,format:{with: /\A[0-9]+\z/, message: '全角数字を使用してください'} do
-    validates :price,numericality:{only_integer: true, in:300..9999999}
+  with_options presence: true do
+    validates :image, :item_name, :item_info, :item_category_id, :item_status_id, :shipping_fee_id, :prefecture_id, :scheduled_delivery_id
+    validates :item_name, length: {maximum: 40}
+    validates :item_info, length: {maximum: 1000}
+    validates :item_category_id, :item_status_id, :shipping_fee_id, :prefecture_id, :scheduled_delivery_id, numericality: { other_than: 1 ,message:"を選択してください"} 
+    validates :price, numericality:{only_integer: true, greater_than_or_equal_to:300, less_than_or_equal_to:9_999_999, message:"は300円以上9,999,999円以内で入力してください"}
   end
+
+  PRICE_REGEX = /\A[0-9]+\z/.freeze
+  validates_format_of :price, with: PRICE_REGEX, message:"には半角数字を使用してください"
 
 end
