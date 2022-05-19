@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :edit,]
+  before_action :authenticate_user!, only: [:new, :edit]
   before_action :set_item, only: [:show, :edit, :update]
   before_action :move_to_index, only: [:edit, :update]
 
@@ -28,9 +28,9 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-       redirect_to item_path(@item.id)
+      redirect_to item_path(@item.id)
     else
-       render :edit
+      render :edit
     end
   end
 
@@ -46,9 +46,6 @@ class ItemsController < ApplicationController
   end
 
   def move_to_index
-    unless current_user.id == @item.user_id
-      redirect_to root_path
-    end
+    redirect_to root_path unless current_user.id == @item.user_id
   end
-
 end
