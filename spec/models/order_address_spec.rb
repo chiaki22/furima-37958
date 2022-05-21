@@ -29,7 +29,7 @@ RSpec.describe OrderAddress, type: :model do
       it '郵便番号が全角だと購入できない' do
         @order_address.postal_code = '１１１−１１１１'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Postal code 半角数値で3桁ハイフン(-)4桁の形式で入力してください")
+        expect(@order_address.errors.full_messages).to include('Postal code 半角数値で3桁ハイフン(-)4桁の形式で入力してください')
       end
       it '郵便番号が数字以外だと購入できない' do
         @order_address.postal_code = 'aaa-aaaa'
@@ -39,7 +39,7 @@ RSpec.describe OrderAddress, type: :model do
       it '郵便番号は3桁ハイフン(-)4桁でないと購入できない' do
         @order_address.postal_code = '1111-111'
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Postal code 半角数値で3桁ハイフン(-)4桁の形式で入力してください")
+        expect(@order_address.errors.full_messages).to include('Postal code 半角数値で3桁ハイフン(-)4桁の形式で入力してください')
       end
       it '都道府県が「---」(id = 1)では購入できない' do
         @order_address.prefecture_id = 1
